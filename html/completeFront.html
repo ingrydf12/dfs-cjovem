@@ -1,12 +1,156 @@
 <!-- TODO: Atividade Prática - Criação de Página Web Completa -->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tema a definir</title>
+    <title>Eventos Web</title>
+    <style>
+        body, header{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        main {
+            padding: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse; /* Usei para remover a borda */
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        img, video, iframe {
+            width: 50%;
+            height: auto;
+        }
+        section {
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
+
+    <header>
+        <h1>EventosWeb</h1>
+        <h3>Maior rede de eventos de tecnologia.</h3>
+    </header>
+
+    <main>
+        <h2>Palestras e Horários</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Palestra</th>
+                    <th>Palestrante</th>
+                    <th>Horário</th>
+                    <th>Local</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tecnologia e Inovação</td>
+                    <td>Joãozinho</td>
+                    <td>10:00</td>
+                    <td>Sala 1</td>
+                </tr>
+                <tr>
+                    <td>IA</td>
+                    <td>Maria</td>
+                    <td>11:30</td>
+                    <td>Sala 2</td>
+                </tr>
+                <tr>
+                    <td>Design Mobile</td>
+                    <td>Carlos</td>
+                    <td>14:00</td>
+                    <td>Sala 3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <section>
+            <h2>Mídias</h2>
+            <h3>Imagens do Local</h3>
+            <img src="https://i.pinimg.com/enabled_lo/564x/6f/75/72/6f75728da1862643712cd83dcfe92052.jpg" alt="Imagem do local do evento">
+
+            <h3>Podcast sobre Tecnologia</h3>
+            <audio controls>
+                <source src="podcast.mp3" type="audio/mpeg">
+                Seu navegador não suporta a tag de áudio.
+            </audio>
+
+            <h3>Vídeo Promocional</h3>
+            <video controls>
+                <source src="forCompleteFront.mp4" type="video/mp4">
+                Seu navegador não suporta a tag de vídeo.
+            </video>
+
+            <h3>Apresentação EventoWeb (YouTube)</h3>
+            <iframe src="github.com/arthurspk/guiadevbrasil/tree/main?tab=readme-ov-file#-sites-para-praticar-uiux"></iframe>
+
+            <h3>Veja o Roteiro do Evento</h3>
+            <embed src="brochura.pdf" type="application/pdf" width="100%" height="600px">
+                
+        <section id="form-registro">
+            <h2>Registro de Participantes</h2>
+            <form action="registro.js" method="post" enctype="multipart/form-data">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
     
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+    
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required><br><br>
+    
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento" required><br><br>
+    
+                <label>Gênero:</label>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label><br><br>
+    
+                <label>Interesses:</label>
+                <input type="checkbox" id="tecnologia" name="interesses" value="tecnologia">
+                <label for="tecnologia">Tecnologia</label>
+                <input type="checkbox" id="negocios" name="interesses" value="negocios">
+                <label for="negocios">Negócios</label>
+                <input type="checkbox" id="design" name="interesses" value="design">
+                <label for="design">Design</label><br><br>
+    
+                <label for="mensagem">Mensagem opcional:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea><br><br>
+    
+                <label for="arquivo">Anexar arquivo:</label>
+                <input type="file" id="arquivo" name="arquivo"><br><br>
+    
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EventosWeb - Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
