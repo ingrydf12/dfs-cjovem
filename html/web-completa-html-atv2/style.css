@@ -1,0 +1,100 @@
+body{
+    font-family: Inter, sans-serif;
+    margin: 0;
+    background-color: #2b2b2b;
+    color: #fafafa;
+}
+
+header{
+    background-color: #161616 ;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.text-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+span{
+    color: #189dd1;
+}
+
+#icon {
+    width: 10%;
+    height: auto;
+}
+
+main, footer{
+    margin: 1rem;
+}
+
+.local-images, .local-images img{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: #fafafa;
+    background-color: #1a0563;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    /* Usei para remover a borda */
+}
+
+table,
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #990bbd;
+    color: white;
+}
+
+/* Estou deixando todas as medias com a largura 50% e a altura é ajustada automaticamente */
+img,
+video,
+iframe {
+    width: 50%;
+    height: auto;
+}
+
+section {
+    margin-top: 40px;
+}
+
+button {
+    color: #fafafa;
+    font-weight: bold;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #097dac;
+    display: flex;
+    position: relative;
+    width: 40%;
+    border-radius: 5px;
+    border: none;
+    padding: 1rem 2rem;
+}

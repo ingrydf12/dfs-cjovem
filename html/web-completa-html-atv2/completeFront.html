@@ -6,80 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos Web</title>
-    <style>
-        body,
-        header {
-            font-family: Inter, sans-serif;
-            margin: 0;
-            background-color: #2b2b2b;
-            color: #fafafa;
-            padding: 20px;
-        }
-
-        #icon{
-            width: 10%;
-            height: auto;
-        }
-
-        form {
-            color: #fafafa;
-            background-color: #1a0563;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-            /* Usei para remover a borda */
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid #dddddd;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #990bbd;
-            color: white;
-        }
-
-        img,
-        video,
-        iframe {
-            width: 50%;
-            height: auto;
-        }
-
-        section {
-            margin-top: 40px;
-        }
-
-        button {
-            color: #fafafa;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            background-color: #097dac;
-            display: flex;
-            position: relative;
-            border-radius: 5px;
-            border: none;
-            padding: 20px 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <header>
         <img id="icon" src="/sources/triangle-eventosweb.svg" alt="icon eventosweb">
-        <h1>EventosWeb</h1>
-        <h3>Maior rede de eventos de tecnologia.</h3>
+        <div class="text-header">
+            <h1><span>EventosWeb</span></h1>
+            <h2>Maior rede de eventos de tecnologia.</h2>
+        </div>
+
     </header>
 
     <main>
@@ -117,10 +54,12 @@
 
         <section id="local-eventoweb">
             <h2>Local</h2>
-            <img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3572005:1729200797/CP1-Siara%20Tech.jpg?f=16x9&$p$f=26e92d4"
-                alt="Imagem 1 do local do evento">
-            <img src="https://gcmais.com.br/wp-content/uploads/2023/11/siara-tech-summit-evento-reune-13-mil-pessoas-e-promove-inovacao-no-ceara.jpg"
-                alt="Imagem 1 do local do evento">
+            <div class="local-images">
+                <img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3572005:1729200797/CP1-Siara%20Tech.jpg?f=16x9&$p$f=26e92d4"
+                    alt="Imagem 1 do local do evento">
+                <img src="https://gcmais.com.br/wp-content/uploads/2023/11/siara-tech-summit-evento-reune-13-mil-pessoas-e-promove-inovacao-no-ceara.jpg"
+                    alt="Imagem 1 do local do evento">
+            </div>
             <h3>Centro de Eventos do Ceará</h3>
             <p><b>Endereço:</b> Av. Washington Soares, 999 - Edson Queiroz, Fortaleza - CE</p>
 
@@ -128,22 +67,21 @@
         <section id="media">
             <h3>Podcast sobre Tecnologia</h3>
             <audio controls>
-                <source src="podcast.mp3" type="audio/mpeg">
+                <source src="trackbase.mp3" type="audio/mp3">
                 Seu navegador não suporta a tag de áudio.
             </audio>
 
             <h3>Vídeo Promocional</h3>
             <video controls>
-                <source src="forCompleteFront.mp4" type="video/mp4">
+                <source src="random-prototype.mp4" type="video/mp4">
                 Seu navegador não suporta a tag de vídeo.
             </video>
 
             <h3>Apresentação EventoWeb (YouTube)</h3>
-            <iframe
-                src="github.com/arthurspk/guiadevbrasil/tree/main?tab=readme-ov-file#-sites-para-praticar-uiux"></iframe>
+            <iframe src="https://www.youtube.com/embed/AsCbD_jhG88" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
 
             <h3>Veja o Roteiro do Evento</h3>
-            <embed src="brochura.pdf" type="application/pdf" width="100%" height="600px">
+            <embed src="EventosWeb.pdf" type="application/pdf" width="50%" height="600px">
         </section>
 
 
@@ -153,22 +91,22 @@
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required><br><br>
 
-                <label for="email">Email:</label>
+                <label for="email"><b>Email:</b></label>
                 <input type="email" id="email" name="email" required><br><br>
 
-                <label for="telefone">Telefone:</label>
+                <label for="telefone"><b>Telefone:</b></label>
                 <input type="tel" id="telefone" name="telefone" required><br><br>
 
-                <label for="nascimento">Data de Nascimento:</label>
+                <label for="nascimento"><b>Data de Nascimento:</b></label>
                 <input type="date" id="nascimento" name="nascimento" required><br><br>
 
-                <label>Gênero:</label>
+                <label><b>Gênero:</b></label>
                 <input type="radio" id="masculino" name="genero" value="masculino" required>
                 <label for="masculino">Masculino</label>
                 <input type="radio" id="feminino" name="genero" value="feminino" required>
                 <label for="feminino">Feminino</label><br><br>
 
-                <label>Interesses:</label>
+                <label><b>Interesses:</b></label>
                 <input type="checkbox" id="tecnologia" name="interesses" value="tecnologia">
                 <label for="tecnologia">Tecnologia</label>
                 <input type="checkbox" id="negocios" name="interesses" value="negocios">
@@ -176,10 +114,11 @@
                 <input type="checkbox" id="design" name="interesses" value="design">
                 <label for="design">Design</label><br><br>
 
-                <label for="mensagem">Mensagem opcional:</label><br>
-                <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea><br><br>
+                <label for="mensagem"><b>Mensagem opcional:</b></label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" cols="50"
+                    placeholder="Insira uma mensagem opcional ao seu registro de participação"></textarea><br><br>
 
-                <label for="arquivo">Anexar arquivo:</label>
+                <label for="arquivo"><b>Anexar arquivo:</b></label>
                 <input type="file" id="arquivo" name="arquivo"><br><br>
 
                 <button type="submit">Registrar</button>
