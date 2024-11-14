@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pedido</title>
+</head>
+
+<body>
+    <main>
+        <!-- Seção do Formulário -->
+        <section id="sectionform">
+            <!-- DIV para Título para o Formulário -->
+            <div id="formtitulo">
+                <h3>Faça o seu pedido por aqui!</h3>
+                <p>Preencha o formulário abaixo para realizar o seu pedido</p>
+            </div>
+
+            <!-- DIV para o Formulário -->
+            <div id="form">
+                <!-- FORM -->
+                <form action="pedir" method="post">
+                    <p>Insira os seus dados abaixo:</p>
+
+                    <!-- FORM NOME-->
+
+                    <label for="nome">Nome:</label>
+                    <br>
+                    <input type="text" name="nome" id="nome" required>
+                    <br><br>
+
+                    <!-- FORM TELEFONE-->
+
+                    <label for="telefone">Telefone:</label>
+                    <br>
+                    <input type="number" name="telefone" id="telefone" required>
+                    <br><br>
+
+                    <!-- FORM EMAIL-->
+
+                    <label for="email">Email:</label>
+                    <br>
+                    <input type="email" name="email" id="email" required>
+                    <br><br>
+
+                    <!-- FORM SABORES-->
+
+                    <label for="sabor">Escolha os SABORES:</label>
+                    <br>
+                    <input type="checkbox" name="sabor" id="Napolitana" value="Napolitana">
+                    <label for="Napolitana">Napolitana</label>
+                    <br>
+
+                    <input type="checkbox" name="sabor" id="marguerita" value="Marguerita com Rúcula">
+                    <label for="marguerita">Marguerita com Rúcula</label>
+                    <br>
+
+                    <input type="checkbox" name="sabor" id="salmao" value="Salmão">
+                    <label for="salmao">Pizza de Salmão</label>
+                    <br>
+
+                    <input type="checkbox" name="sabor" id="vegetariana" value="Vegetariana">
+                    <label for="vegetariana">Vegetariana</label>
+                    <br>
+                    <input type="checkbox" name="sabor" id="bacon" value="Bacon e Abobrinha">
+                    <label for="bacon">Bacon e Abobrinha</label>
+                    <br><br>
+
+                    <!-- FORM SOBREMESAS-->
+
+                    <label for="sobremesa">Escolha as SOBREMESAS:</label>
+                    <br>
+                    <input type="checkbox" name="sobremesa" id="brownie" value="Brownie Redvelvet">
+                    <label for="brownie">Brownie Redvelvet</label>
+                    <br>
+
+                    <input type="checkbox" name="sobremesa" id="torta" value="Torta de Limão">
+                    <label for="marguerita">Torta de Limão</label>
+                    <br>
+
+                    <input type="checkbox" name="sobremesa" id="pudim" value="Pudim de Amêndoas">
+                    <label for="pudim">Pudim de Amêndoas</label>
+                    <br><br>
+
+                    <!-- FORM TAMANHO-->
+
+                    <label for="tamanho">Escolha o tamanho da Pizza</label>
+                    <br>
+                    <select name="tamanho" id="tamanho" required>
+
+                        <option value=""></option>
+
+                        <option value="Pequena">Pequena</option>
+                        <option value="Média">Média</option>
+                        <option value="Grande">Grande</option>
+                        <option value="Família">Família</option>
+
+                    </select>
+                    <br><br>
+
+                    <!-- FORM OBSERVÇÃO A MAIS -->
+
+                    <label for="obs">Observações</label>
+                    <br>
+                    <textarea name="obs" id="obs"></textarea>
+                    <br><br>
+
+                    <!-- FORM MÉTODO DE PAGAMENTO-->
+
+                    <label for="pagamento">Método de Pagamento</label>
+                    <br>
+
+                    <select name="pagamento" id="pagamento" required>
+
+                        <option value=""></option>
+
+                        <option value="Pix">Pix</option>
+                        <option value="Cartão de Crédito">Cartão de Crédito</option>
+                        <option value="Cartão de Débito">Cartão de Débito</option>
+                        <option value="Dinheiro">Dinheiro Físico</option>
+
+                    </select>
+                    <br><br>
+
+                    <!-- BOTÃO PARA ENVIO DO FORM MÉTODO DE PAGAMENTO-->
+
+                    <button>Fazer Pedido</button>
+                    <button>
+                        <a href="home.html" target="_blank">Retornar a tela inicial</a>
+                    </button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>
